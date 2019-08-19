@@ -19,12 +19,12 @@ public class ContactsTest {
     @Value("${local.server.port}")
     int port;
 
-    @AfterClass
+    //@AfterClass
     public static void tearDown() {
         getDriver().close();
     }
 
-    @Test
+    //@Test
     public void should_display_contact() throws Exception {
         //given
         ContactsPage contactsPage = new ContactsPage(port).open();

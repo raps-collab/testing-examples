@@ -23,6 +23,7 @@ pipeline {
             steps {
                 snDevOpsStep "39e392a3c7d333008c2c02b827c26099"
                 junit 'target/surefire-reports/TEST-*.xml'
+                cucumber "**/cucumber.json"
             }
         }
     }

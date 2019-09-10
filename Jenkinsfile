@@ -12,7 +12,7 @@ pipeline {
                 stage('Compile2'){
                     steps{
                         snDevOpsStep "e0633729c7b333008c2c02b827c2601a"
-                        sh 'mvn clean package -DskipTests=true'
+                        //sh 'mvn clean package -DskipTests=true'
                     }
                 }
             }

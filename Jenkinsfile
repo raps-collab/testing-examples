@@ -20,7 +20,7 @@ pipeline {
             }
         }
         stage('Publishing Tests') {
-            snDevOpsStep "ec633729c7b333008c2c02b827c26019"
+            //snDevOpsStep "ec633729c7b333008c2c02b827c26019"
             parallel {
                 stage("Publish Junit") {
                     steps {
@@ -31,7 +31,7 @@ pipeline {
                 }
                 stage("Publish Cucumber") {
                     steps {
-                        snDevOpsStep '60633729c7b333008c2c02b827c2601a'
+                        snDevOpsStep 'ec633729c7b333008c2c02b827c26019'
                         cucumber "**/cucumber.json"
                     }
                 }

@@ -1,10 +1,18 @@
 pipeline {
     agent any
     stages {
-        stage('Compile') {
-            steps {
-                snDevOpsStep "e0633729c7b333008c2c02b827c2601a"
-                sh 'mvn clean package -DskipTests=true'
+        stage(Compile){
+            parallel{
+                stage('Compile1') {
+                    steps {
+                        snDevOpsStep "e0633729c7b333008c2c02b827c2601a"
+                        sh 'mvn clean package -DskipTests=true'
+                    }
+                }
+                stage('Compile2'){
+                    snDevOpsStep "e0633729c7b333008c2c02b827c2601a"
+                        sh 'mvn clean package -DskipTests=true'
+                }
             }
         }
         stage('Unit Tests') {

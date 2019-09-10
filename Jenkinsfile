@@ -31,7 +31,7 @@ pipeline {
                 }
                 stage("Publish Cucumber") {
                     steps {
-                        snDevOpsStep 'ec633729c7b333008c2c02b827c26019'
+                        snDevOpsStep 'e4633729c7b333008c2c02b827c26019'
                         cucumber "**/cucumber.json"
                     }
                 }

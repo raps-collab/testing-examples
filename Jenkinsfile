@@ -7,6 +7,8 @@ pipeline {
                     steps {
                         snDevOpsStep "e0633729c7b333008c2c02b827c2601a"
                         sh 'mvn clean package -DskipTests=true'
+                        sh 'mvn surefire:test'
+                        junit 'target/surefire-reports/TEST-*.xml'
                     }
                 }
                 stage('Compile2'){
@@ -20,7 +22,7 @@ pipeline {
         stage('Unit Tests') {
             steps {
                 snDevOpsStep "60633729c7b333008c2c02b827c2601a"
-                sh 'mvn surefire:test'
+                //sh 'mvn surefire:test'
             }
         }
          stage('Integration Tests') {
@@ -36,7 +38,7 @@ pipeline {
                     steps {
                         snDevOpsStep 'ec633729c7b333008c2c02b827c26019'
                         //snDevOpsChange()
-                        junit 'target/surefire-reports/TEST-*.xml'
+                        //junit 'target/surefire-reports/TEST-*.xml'
                     }
                 }
                 stage("Publish Cucumber") {

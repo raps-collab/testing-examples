@@ -3,27 +3,38 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                snDevOpsStep "3de392a3c7d333008c2c02b827c26099"
+                snDevOpsStep "e0633729c7b333008c2c02b827c2601a"
                 sh 'mvn clean package -DskipTests=true'
             }
         }
         stage('Unit Tests') {
             steps {
-                snDevOpsStep "b9e392a3c7d333008c2c02b827c26099"
+                snDevOpsStep "60633729c7b333008c2c02b827c2601a"
                 sh 'mvn surefire:test'
             }
         }
          stage('Integration Tests') {
             steps {
-                snDevOpsStep "31e392a3c7d333008c2c02b827c26099"
+                snDevOpsStep "e4633729c7b333008c2c02b827c26019"
                 sh 'mvn failsafe:integration-test'
             }
         }
         stage('Publishing Tests') {
-            steps {
-                snDevOpsStep "39e392a3c7d333008c2c02b827c26099"
-                junit 'target/surefire-reports/TEST-*.xml'
-                cucumber "**/cucumber.json"
+            snDevOpsStep "ec633729c7b333008c2c02b827c26019"
+            parallel {
+                stage("Publish Junit") {
+                    steps {
+                        snDevOpsStep 'e4633729c7b333008c2c02b827c26019'
+                        //snDevOpsChange()
+                        junit 'target/surefire-reports/TEST-*.xml'
+                    }
+                }
+                stage("Publish Cucumber") {
+                    steps {
+                        snDevOpsStep '60633729c7b333008c2c02b827c2601a'
+                        cucumber "**/cucumber.json"
+                    }
+                }
             }
         }
     }

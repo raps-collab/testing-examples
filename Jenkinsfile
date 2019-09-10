@@ -29,6 +29,7 @@ pipeline {
             steps {
                 snDevOpsStep "e4633729c7b333008c2c02b827c26019"
                 sh 'mvn failsafe:integration-test'
+                junit 'target/surefire-reports/TEST-*.xml'
             }
         }
         stage('Publishing Tests') {

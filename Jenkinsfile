@@ -24,14 +24,14 @@ pipeline {
             parallel {
                 stage("Publish Junit") {
                     steps {
-                        snDevOpsStep 'e4633729c7b333008c2c02b827c26019'
+                        snDevOpsStep 'ec633729c7b333008c2c02b827c26019'
                         //snDevOpsChange()
                         junit 'target/surefire-reports/TEST-*.xml'
                     }
                 }
                 stage("Publish Cucumber") {
                     steps {
-                        snDevOpsStep 'e4633729c7b333008c2c02b827c26019'
+                        snDevOpsStep 'ec633729c7b333008c2c02b827c26019'
                         cucumber "**/cucumber.json"
                     }
                 }

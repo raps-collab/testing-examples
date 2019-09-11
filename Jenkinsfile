@@ -7,7 +7,7 @@ pipeline {
       stage("build") {
           steps {
               echo "Building...."
-              snDevOpsStep '0963f7b1c77333006234c4047e9763c8'
+              snDevOpsStep 'e0633729c7b333008c2c02b827c2601a'
               sh 'mvn test -Dpublish'
                junit '**/target/surefire-reports/*.xml'
               sleep 10
@@ -16,7 +16,7 @@ pipeline {
       stage("test") {
            steps {
                   echo "Testing.."
-                  snDevOpsStep '8163f7b1c77333006234c4047e9763c9'
+                  snDevOpsStep '60633729c7b333008c2c02b827c2601a'
              //snDevOpsChange()
         sleep 10
            }
@@ -25,7 +25,7 @@ pipeline {
           steps {
               echo "Deploying..."
 
-              snDevOpsStep '0163f7b1c77333006234c4047e9763c9'
+              snDevOpsStep 'e4633729c7b333008c2c02b827c26019'
               //snDevOpsChange()
 
               sleep 10

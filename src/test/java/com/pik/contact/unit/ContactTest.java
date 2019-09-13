@@ -14,7 +14,7 @@ public class ContactTest {
 
         contact.updateWith(aContact("John", "Smith"));
 
-        assertThat(contact.getFullName()).isEqualTo("Smith1");
+        assertThat(contact.getFullName()).isEqualTo("Smith");
     }
 
     private Contact aContact(String name, String fullName) {

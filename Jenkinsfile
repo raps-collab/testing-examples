@@ -36,11 +36,11 @@ pipeline {
             //snDevOpsStep "ec633729c7b333008c2c02b827c26019"
             //parallel {
               //  stage("Publish Junit") {
-                    steps {
-                        snDevOpsStep (stepSysId:'29ecb637c73333008c2c02b827c2609c')
+                    //steps {
+                      //  snDevOpsStep (stepSysId:'29ecb637c73333008c2c02b827c2609c')
                         //snDevOpsChange()
                         //junit 'target/surefire-reports/TEST-*.xml'
-                    }
+                    //}
                 //}
                 //stage("Publish Cucumber") {
                     steps {

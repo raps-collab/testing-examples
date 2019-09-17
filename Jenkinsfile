@@ -45,6 +45,7 @@ pipeline {
                 //stage("Publish Cucumber") {
                     steps {
                         snDevOpsStep (stepSysId:'29ecb637c73333008c2c02b827c2609c')
+                        snDevOpsChange()
                         cucumber "**/cucumber.json"
                         //echo "test"
                   //  }

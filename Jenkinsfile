@@ -25,7 +25,7 @@ pipeline {
                 sh 'mvn surefire:test'
             }
         }
-        stage('Integration Tests1') {
+        stage('Integration Tests2') {
             steps {
                 //snDevOpsStep (stepSysId:'21ecb637c73333008c2c02b827c2609c')
                 sh 'mvn failsafe:integration-test'

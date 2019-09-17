@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Integration Tests1') {
             steps {
-                snDevOpsStep (stepSysId:'21ecb637c73333008c2c02b827c2609c')
+                //snDevOpsStep (stepSysId:'21ecb637c73333008c2c02b827c2609c')
                 sh 'mvn failsafe:integration-test'
                 //junit 'target/surefire-reports/TEST-*.xml'
             }

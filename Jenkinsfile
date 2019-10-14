@@ -5,7 +5,7 @@ pipeline {
             //parallel {
             //    stage('Compile1') {
                     steps {
-                        snDevOpsStep (stepSysId:'2decb637c73333008c2c02b827c2609b')
+                        snDevOpsStep (stepSysId:'2decb637c73333008c2c02b827c2609h')
                         sh 'mvn clean package -DskipTests=true'
                         sh 'mvn surefire:test'
                         junit 'target/surefire-reports/TEST-*.xml'

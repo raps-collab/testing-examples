@@ -5,7 +5,7 @@ pipeline {
             //parallel {
             //    stage('Compile1') {
                     steps {
-                        snDevOpsStep (stepSysId:'2decb637c73333008c2c02b827c2609e')
+                        snDevOpsStep()
                         sh 'mvn clean package -DskipTests=true'
                         sh 'mvn surefire:test'
                         junit 'target/surefire-reports/TEST-*.xml'
@@ -21,14 +21,14 @@ pipeline {
         }
         stage('Unit Tests1') {
             steps {
-                snDevOpsStep (stepSysId:'a9ecb637c73333008c2c02b827c2609c')
-                sh 'mvn surefire:test'
+                snDevOpsStep()
+                //sh 'mvn surefire:test'
             }
         }
         stage('Integration Tests2') {
             steps {
-                //snDevOpsStep (stepSysId:'21ecb637c73333008c2c02b827c2609c')
-                sh 'mvn failsafe:integration-test'
+                snDevOpsStep()
+                //sh 'mvn failsafe:integration-test'
                 //junit 'target/surefire-reports/TEST-*.xml'
             }
         }
@@ -44,9 +44,9 @@ pipeline {
                 //}
                 //stage("Publish Cucumber") {
                     steps {
-                        snDevOpsStep (stepSysId:'29ecb637c73333008c2c02b827c2609c')
+                        snDevOpsStep()
                         snDevOpsChange()
-                        cucumber "**/cucumber.json"
+                        //cucumber "**/cucumber.json"
                         //echo "test"
                   //  }
                 //}

@@ -6,8 +6,8 @@ pipeline {
             //    stage('Compile1') {
                     steps {
                         snDevOpsStep()
-                        //sh 'mvn clean package -DskipTests=true'
-                        //sh 'mvn surefire:test'
+                        sh 'mvn clean package -DskipTests=true'
+                        sh 'mvn surefire:test'
                         //junit 'target/surefire-reports/TEST-*.xml'
                     }
               //  }
@@ -46,7 +46,7 @@ pipeline {
                     steps {
                         snDevOpsStep()
                         snDevOpsChange()
-                        //junit 'target/surefire-reports/TEST-*.xml'
+                        junit 'target/surefire-reports/TEST-*.xml'
                         //cucumber "**/cucumber.json"
                         //echo "test"
                   //  }

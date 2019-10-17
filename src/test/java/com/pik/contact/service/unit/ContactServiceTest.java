@@ -41,7 +41,7 @@ public class ContactServiceTest {
         Contact contact = new Contact("John", "Doe", "Developer", "jdoe@company.com", "1234567890", "jdoe90");
         when(contactRepository.searchContacts("jo")).thenReturn(asList(contact));
 
-        List<Contact> contacts = contactService.searchContacts("Jo1");
+        List<Contact> contacts = contactService.searchContacts("Jo");
 
         assertThat(contacts).contains(contact);
     }

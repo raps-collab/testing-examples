@@ -30,7 +30,7 @@ pipeline {
                 snDevOpsStep()
                 //sh 'mvn failsafe:integration-test'
                 //junit 'target/surefire-reports/TEST-*.xml'
-                sleep(50)
+                sleep(10)
             }
         }
         stage('Publishing Tests1') {

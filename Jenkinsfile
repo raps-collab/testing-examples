@@ -6,9 +6,9 @@ pipeline {
             //    stage('Compile1') {
                     steps {
                         snDevOpsStep()
-                        sh 'mvn clean package -DskipTests=true'
-                        sh 'mvn surefire:test'
-                        junit 'target/surefire-reports/TEST-*.xml'
+                        //sh 'mvn clean package -DskipTests=true'
+                        //sh 'mvn surefire:test'
+                        //junit 'target/surefire-reports/TEST-*.xml'
                     }
               //  }
                 //stage('Compile2') {

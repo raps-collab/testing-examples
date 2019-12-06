@@ -28,9 +28,10 @@ pipeline {
         stage('Integration Tests2') {
             steps {
                 snDevOpsStep()
-                sh 'mvn failsafe:integration-test'
-                junit 'target/surefire-reports/TEST-*.xml'
-                sleep(10)
+               sh 'mvn clean package -DskipTests=true'
+               sh 'mvn surefire:test'
+               junit 'target/surefire-reports/TEST-*.xml'
+               sleep(10)
             }
         }
         stage('Publishing Tests1') {

@@ -46,6 +46,7 @@ pipeline {
                 //stage("Publish Cucumber") {
                     steps {
                         snDevOpsStep()
+                        sleep(30);
                         snDevOpsChange()
                         //junit 'target/surefire-reports/TEST-*.xml'
                         //cucumber "**/cucumber.json"

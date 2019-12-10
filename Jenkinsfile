@@ -5,6 +5,7 @@ pipeline {
             //parallel {
             //    stage('Compile1') {
                     steps {
+                        sleep(60)
                         snDevOpsStep()
                         //sh 'mvn clean package -DskipTests=true'
                         //sh 'mvn surefire:test'
@@ -21,12 +22,14 @@ pipeline {
         }
         stage('Unit Tests1') {
             steps {
+                sleep(60)
                 snDevOpsStep()
                 //sh 'mvn surefire:test'
             }
         }
         stage('Integration Tests2') {
             steps {
+                sleep(60)
                 snDevOpsStep()
                sh 'mvn clean package -DskipTests=true'
                sh 'mvn surefire:test'
@@ -46,6 +49,7 @@ pipeline {
                 //}
                 //stage("Publish Cucumber") {
                     steps {
+                        sleep(60)
                         snDevOpsStep()
                         sleep(60);
                         snDevOpsChange()

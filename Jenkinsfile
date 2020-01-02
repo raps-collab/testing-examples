@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage(Compile1) {
+        stage(Compile2) {
             //parallel {
             //    stage('Compile1') {
                     steps {
-                        sleep(60)
+                        sleep(5)
                         snDevOpsStep()
                         //sh 'mvn clean package -DskipTests=true'
                         //sh 'mvn surefire:test'
@@ -20,24 +20,24 @@ pipeline {
                 //}
             //}
         }
-        stage('Unit Tests1') {
+        stage('Unit Tests2') {
             steps {
-                sleep(60)
+                sleep(5)
                 snDevOpsStep()
                 //sh 'mvn surefire:test'
             }
         }
-        stage('Integration Tests1') {
+        stage('Integration Tests2') {
             steps {
-                sleep(60)
+                sleep(5)
                 snDevOpsStep()
                sh 'mvn clean package -DskipTests=true'
                sh 'mvn surefire:test'
                junit 'target/surefire-reports/TEST-*.xml'
-               sleep(10)
+               sleep(5)
             }
         }
-        stage('Publishing Tests1') {
+        stage('Publishing Tests2') {
             //snDevOpsStep "ec633729c7b333008c2c02b827c26019"
             //parallel {
               //  stage("Publish Junit") {
@@ -49,9 +49,9 @@ pipeline {
                 //}
                 //stage("Publish Cucumber") {
                     steps {
-                        sleep(60)
+                        sleep(5)
                         snDevOpsStep()
-                        sleep(60);
+                        sleep(5);
                         snDevOpsChange()
                         //junit 'target/surefire-reports/TEST-*.xml'
                         //cucumber "**/cucumber.json"

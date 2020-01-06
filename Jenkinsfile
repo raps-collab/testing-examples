@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Build6') {
+        stage('Build7') {
             //parallel {
             //    stage('Compile1') {
                     steps {
-                        sleep(5)
+                        sleep(10)
                         snDevOpsStep()
                         //sh 'mvn clean package -DskipTests=true'
                         //sh 'mvn surefire:test'
@@ -20,16 +20,16 @@ pipeline {
                 //}
             //}
         }
-        stage('Test6') {
+        stage('Test7') {
             steps {
-                sleep(5)
+                sleep(10)
                 snDevOpsStep()
                 //sh 'mvn surefire:test'
             }
         }
-        stage('Deploy6') {
+        stage('Deploy7') {
             steps {
-                sleep(5)
+                sleep(10)
                 snDevOpsStep()
                sh 'mvn clean package -DskipTests=true'
                sh 'mvn surefire:test'
@@ -37,7 +37,7 @@ pipeline {
                sleep(5)
             }
         }
-        stage('Prod6') {
+        stage('Prod7') {
             //snDevOpsStep "ec633729c7b333008c2c02b827c26019"
             //parallel {
               //  stage("Publish Junit") {
@@ -49,7 +49,7 @@ pipeline {
                 //}
                 //stage("Publish Cucumber") {
                     steps {
-                        sleep(5)
+                        sleep(10)
                         snDevOpsStep()
                         sleep(5);
                         snDevOpsChange()

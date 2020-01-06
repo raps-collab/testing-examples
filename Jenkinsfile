@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build5') {
+        stage('Build6') {
             //parallel {
             //    stage('Compile1') {
                     steps {
@@ -20,14 +20,14 @@ pipeline {
                 //}
             //}
         }
-        stage('Test5') {
+        stage('Test6') {
             steps {
                 sleep(5)
                 snDevOpsStep()
                 //sh 'mvn surefire:test'
             }
         }
-        stage('Deploy5') {
+        stage('Deploy6') {
             steps {
                 sleep(5)
                 snDevOpsStep()
@@ -37,7 +37,7 @@ pipeline {
                sleep(5)
             }
         }
-        stage('Prod5') {
+        stage('Prod6') {
             //snDevOpsStep "ec633729c7b333008c2c02b827c26019"
             //parallel {
               //  stage("Publish Junit") {

@@ -5,7 +5,7 @@ pipeline {
             //parallel {
             //    stage('Compile1') {
                     steps {
-                        //sleep(40)
+                        sleep(20)
                         snDevOpsStep()
                         //sh 'mvn clean package -DskipTests=true'
                         //sh 'mvn surefire:test'
@@ -29,12 +29,12 @@ pipeline {
         }
         stage('Deployl') {
             steps {
-                //sleep(10)
+                sleep(10)
                 snDevOpsStep()
-               //sh 'mvn clean package -DskipTests=true'
-               //sh 'mvn surefire:test'
-               //junit 'target/surefire-reports/TEST-*.xml'
-               //sleep(25)
+               sh 'mvn clean package -DskipTests=true'
+               sh 'mvn surefire:test'
+               junit 'target/surefire-reports/TEST-*.xml'
+               sleep(25)
             }
         }
         stage('Prodl') {
@@ -49,9 +49,9 @@ pipeline {
                 //}
                 //stage("Publish Cucumber") {
                     steps {
-                        //sleep(40)
-                        //snDevOpsStep()
-                        sleep(60)
+                        sleep(20)
+                        snDevOpsStep()
+                        //sleep(60)
                         snDevOpsChange()
                         //junit 'target/surefire-reports/TEST-*.xml'
                         //cucumber "**/cucumber.json"

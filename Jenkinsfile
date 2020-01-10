@@ -5,7 +5,7 @@ pipeline {
             //parallel {
             //    stage('Compile1') {
                     steps {
-                        sleep(40)
+                        //sleep(40)
                         snDevOpsStep()
                         //sh 'mvn clean package -DskipTests=true'
                         //sh 'mvn surefire:test'
@@ -51,6 +51,7 @@ pipeline {
                     steps {
                         //sleep(11)
                         snDevOpsStep()
+                        sleep(40)
                         snDevOpsChange()
                         //junit 'target/surefire-reports/TEST-*.xml'
                         //cucumber "**/cucumber.json"

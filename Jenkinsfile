@@ -5,7 +5,7 @@ pipeline {
             //parallel {
             //    stage('Compile1') {
                     steps {
-                        //sleep(20)
+                        sleep(40)
                         snDevOpsStep()
                         //sh 'mvn clean package -DskipTests=true'
                         //sh 'mvn surefire:test'

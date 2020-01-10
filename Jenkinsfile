@@ -49,7 +49,7 @@ pipeline {
                 //}
                 //stage("Publish Cucumber") {
                     steps {
-                        //sleep(11)
+                        sleep(40)
                         snDevOpsStep()
                         sleep(40)
                         snDevOpsChange()

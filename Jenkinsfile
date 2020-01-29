@@ -22,12 +22,13 @@ pipeline {
                     stages {
                         stage("Alert-If-Issues") {
                             steps {
-                                //sh "ls -ltr"
+                                echo 'test'
                             }
                         }
                         stage("Conclude") {
                             steps {
                                 //sh "mvn javadoc:jar"
+                                echo 'test'
                             }
                         }
                     }
@@ -49,6 +50,7 @@ pipeline {
                     post {
                         success {
                             //junit '**/target/surefire-reports/*.xml' 
+                            echo 'test'
                         }
                     }
                 }
@@ -67,11 +69,13 @@ pipeline {
             stage('Pre_Prod_Sub1') {
                 steps {
                     //sh 'mvn --version'
+                    echo 'test'
                 }
              }
              stage('Pre_Prod_Sub2') {
                 steps{
                     //sh 'mvn --version'
+                    echo 'test'
                 }
              }
             }

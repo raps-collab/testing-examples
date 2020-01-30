@@ -12,7 +12,6 @@ pipeline {
                 stage("Staging-Deploy") {
                     steps {
                         snDevOpsStep()
-                        
                     }
                 }
                 stage("Send-Report") {

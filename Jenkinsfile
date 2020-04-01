@@ -81,7 +81,7 @@ pipeline {
            stages{
              stage('sub-prod') {
                steps {
-                    //sh 'mvn --version'
+                    //sh 'mvn --version '
                     snDevOpsStep()
                     snDevOpsChange()
                 }

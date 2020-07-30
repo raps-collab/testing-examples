@@ -1,6 +1,15 @@
 pipeline {
     agent any
     stages {
+        
+        stage('CI-Test') {
+            steps {
+                sleep 10
+                snDevOpsStep()
+                
+            }
+        }
+        
         stage('CI') {
             steps {
                 snDevOpsStep()

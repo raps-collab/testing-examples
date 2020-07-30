@@ -5,6 +5,7 @@ pipeline {
         stage('CI-Test') {
             steps {
                 sleep 10
+                echo 'test'
                 //snDevOpsStep()
                 
             }
@@ -12,6 +13,7 @@ pipeline {
         
         stage('CI') {
             steps {
+                echo 'test'
                 //snDevOpsStep()
                 
             }
@@ -20,6 +22,7 @@ pipeline {
             stages {
                 stage("Staging-Deploy") {
                     steps {
+                        echo 'test'
                         //snDevOpsStep()
                     }
                 }
@@ -61,6 +64,7 @@ pipeline {
                 }
                 stage('UAT static code test') {
                     steps {
+                            echo 'test'
                          //snDevOpsStep()
                         // snDevOpsChange()
                        
@@ -90,6 +94,7 @@ pipeline {
            stages{
              stage('sub-prod') {
                steps {
+                    echo 'test'
                     //sh 'mvn --version '
                     //snDevOpsStep()
                     //snDevOpsChange()

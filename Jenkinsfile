@@ -98,7 +98,7 @@ pipeline {
                     echo 'test'
                     //sh 'mvn --version '
                     //snDevOpsStep()
-                    //snDevOpsChange()
+                    snDevOpsChange()
                 }
              }
            }

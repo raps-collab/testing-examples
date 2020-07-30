@@ -47,6 +47,7 @@ pipeline {
             parallel {
                 stage('UAT test test1') {
                     steps {
+                         echo 'test'
                         //snDevOpsStep()
                         //snDevOpsChange()
                         //sh '''

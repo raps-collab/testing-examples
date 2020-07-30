@@ -5,14 +5,14 @@ pipeline {
         stage('CI-Test') {
             steps {
                 sleep 10
-                snDevOpsStep()
+                //snDevOpsStep()
                 
             }
         }
         
         stage('CI') {
             steps {
-                snDevOpsStep()
+                //snDevOpsStep()
                 
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             stages {
                 stage("Staging-Deploy") {
                     steps {
-                        snDevOpsStep()
+                        //snDevOpsStep()
                     }
                 }
                 stage("Send-Report") {
@@ -44,7 +44,7 @@ pipeline {
             parallel {
                 stage('UAT test test1') {
                     steps {
-                        snDevOpsStep()
+                        //snDevOpsStep()
                         //snDevOpsChange()
                         //sh '''
                           //  export M2_HOME=/opt/apache-maven-3.6.0 # your Mavan home path
@@ -61,7 +61,7 @@ pipeline {
                 }
                 stage('UAT static code test') {
                     steps {
-                         snDevOpsStep()
+                         //snDevOpsStep()
                         // snDevOpsChange()
                        
                     }
@@ -91,7 +91,7 @@ pipeline {
              stage('sub-prod') {
                steps {
                     //sh 'mvn --version '
-                    snDevOpsStep()
+                    //snDevOpsStep()
                     //snDevOpsChange()
                 }
              }

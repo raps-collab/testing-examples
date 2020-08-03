@@ -4,18 +4,13 @@ pipeline {
         
         stage('CI-Test') {
             steps {
-                sleep 10
-                echo 'test'
-                //snDevOpsStep()
-                
+                sleep 10              
             }
         }
         
         stage('CI') {
             steps {
                 echo 'test'
-                //snDevOpsStep()
-                
             }
         }
         stage('UAT deploy') {
@@ -23,7 +18,6 @@ pipeline {
                 stage("Staging-Deploy") {
                     steps {
                         echo 'test'
-                        //snDevOpsStep()
                     }
                 }
                 stage("Send-Report") {
@@ -35,7 +29,6 @@ pipeline {
                         }
                         stage("Conclude") {
                             steps {
-                                //sh "mvn javadoc:jar"
                                 echo 'test'
                             }
                         }
@@ -48,17 +41,9 @@ pipeline {
                 stage('UAT test test1') {
                     steps {
                          echo 'test'
-                        //snDevOpsStep()
-                        //snDevOpsChange()
-                        //sh '''
-                          //  export M2_HOME=/opt/apache-maven-3.6.0 # your Mavan home path
-                            //export PATH=$PATH:$M2_HOME/bin
-                            //mvn --version
-                        //'''
                     }
                     post {
                         success {
-                            //junit '**/target/surefire-reports/*.xml' 
                             echo 'test'
                         }
                     }
@@ -66,9 +51,6 @@ pipeline {
                 stage('UAT static code test') {
                     steps {
                             echo 'test'
-                         //snDevOpsStep()
-                        // snDevOpsChange()
-                       
                     }
                 }
             }
@@ -78,13 +60,11 @@ pipeline {
            stages {
             stage('Pre_Prod_Sub1') {
                 steps {
-                    //sh 'mvn --version'
                     echo 'test'
                 }
              }
              stage('Pre_Prod_Sub2') {
                 steps{
-                    //sh 'mvn --version'
                     echo 'test'
                 }
              }
@@ -95,9 +75,6 @@ pipeline {
            stages{
              stage('sub-prod') {
                steps {
-                    echo 'test'
-                    //sh 'mvn --version '
-                    //snDevOpsStep()
                     snDevOpsChange()
                 }
              }

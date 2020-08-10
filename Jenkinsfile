@@ -4,12 +4,14 @@ pipeline {
         
         stage('CI-Test') {
             steps {
+                snDevOpsStep()
                 sleep 10              
             }
         }
         
         stage('CI') {
             steps {
+                snDevOpsStep()
                 echo 'test'
             }
         }
@@ -17,6 +19,7 @@ pipeline {
             stages {
                 stage("Staging-Deploy") {
                     steps {
+                        snDevOpsStep()
                         echo 'test'
                     }
                 }
@@ -24,11 +27,13 @@ pipeline {
                     stages {
                         stage("Alert-If-Issues") {
                             steps {
+                                snDevOpsStep()
                                 echo 'test'
                             }
                         }
                         stage("Conclude") {
                             steps {
+                                snDevOpsStep()
                                 echo 'test'
                             }
                         }
@@ -40,6 +45,7 @@ pipeline {
             parallel {
                 stage('UAT test test1') {
                     steps {
+                        √
                          echo 'test'
                     }
                     post {
@@ -50,6 +56,7 @@ pipeline {
                 }
                 stage('UAT static code test') {
                     steps {
+                        snDevOpsStep()
                             echo 'test'
                     }
                 }
@@ -75,6 +82,7 @@ pipeline {
            stages{
              stage('sub-prod') {
                steps {
+                   snDevOpsStep()
                     snDevOpsChange()
                 }
              }

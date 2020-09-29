@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    stages {
+        
+        stage('CI-Test') {
+            steps {
+                snDevOpsStep()
+                sleep 10              
+            }
+        }
+        
+        stage('CI') {
+            steps {
+                snDevOpsStep()
+                echo 'test'
+            }
+        }
+        stage('UAT deploy') {
+           steps {
+                snDevOpsStep()
+                echo 'test'
+            }
+        }
+        stage('UAT test') {
+            steps {
+                snDevOpsStep()
+                snDevOpsChange()
+                echo 'test'
+            }
+        }
+
+         
+        stage('PROD') {
+            steps {
+                snDevOpsStep()
+                snDevOpsChange()
+                echo 'test'
+            }
+        }
+    }
+}

@@ -56,6 +56,7 @@ pipeline {
                 stage('UAT static code test') {
                     steps {
                         snDevOpsStep()
+                        snDevOpsChange()
                             echo 'test'
                     }
                 }

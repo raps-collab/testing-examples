@@ -4,26 +4,27 @@ pipeline {
         
         stage('CI-Test') {
             steps {
-                snDevOpsStep()
-                sleep 10              
+                //snDevOpsStep()
+                //sleep 10   
+                echo 'test'
             }
         }
         
         stage('CI') {
             steps {
-                snDevOpsStep()
+                //snDevOpsStep()
                 echo 'test'
             }
         }
         stage('UAT deploy') {
            steps {
-                snDevOpsStep()
+                //snDevOpsStep()
                 echo 'test'
             }
         }
         stage('UAT test') {
             steps {
-                snDevOpsStep()
+                //snDevOpsStep()
                 snDevOpsChange()
                 echo 'test'
             }
@@ -32,7 +33,7 @@ pipeline {
          
         stage('PROD') {
             steps {
-                snDevOpsStep()
+                //snDevOpsStep()
                 snDevOpsChange()
                 echo 'test'
             }

@@ -19,6 +19,7 @@ pipeline {
         stage('UAT deploy') {
            steps {
                 //snDevOpsStep()
+                sleep 10
                 echo 'test'
             }
         }

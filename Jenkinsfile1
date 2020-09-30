@@ -13,6 +13,7 @@
 	        stage('CI') {
 	            steps {
 	                //snDevOpsStep()
+			snDevOpsChange()
 	                echo 'test'
 	            }
 	        }

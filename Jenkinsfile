@@ -4,6 +4,7 @@ pipeline {
         
         stage('CI-Test') {
             steps {
+                snDevopsChange()
                 snDevOpsStep()
                 sleep 10              
             }

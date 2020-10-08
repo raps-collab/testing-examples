@@ -3,10 +3,30 @@ pipeline {
     stages {
         
         stage('CI-Test') {
-            steps {
-                snDevOpsStep()
-                snDevOpsChange()
-                echo 'test'
+            stages {
+                stage("Staging-Deploy") {
+                    steps {
+                        snDevOpsStep()
+                        echo 'test'
+                    }
+                }
+                stage("Send-Report") {
+                    stages {
+                        stage("Alert-If-Issues") {
+                            steps {
+                                snDevOpsStep()
+                                echo 'test'
+                            }
+                        }
+                        stage("Conclude") {
+                            steps {
+                                snDevOpsStep()
+                                snDevOpsChange()
+                                echo 'test'
+                            }
+                        }
+                    }
+                }
             }
         }
         

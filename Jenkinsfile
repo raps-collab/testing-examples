@@ -21,7 +21,7 @@ pipeline {
                         stage("Conclude") {
                             steps {
                                 snDevOpsStep()
-                                snDevopsChange()
+                                snDevOpsChange()
                                 echo 'test'
                             }
                         }

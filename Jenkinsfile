@@ -4,21 +4,21 @@ pipeline {
         
         stage('CI-Test') {
             stages {
-                stage("Staging-Deploy") {
+                stage("Staging-Deploy1") {
                     steps {
                         snDevOpsStep()
                         echo 'test'
                     }
                 }
-                stage("Send-Report") {
+                stage("Send-Report1") {
                     stages {
-                        stage("Alert-If-Issues") {
+                        stage("Alert-If-Issues1") {
                             steps {
                                 snDevOpsStep()
                                 echo 'test'
                             }
                         }
-                        stage("Conclude") {
+                        stage("Conclude1") {
                             steps {
                                 snDevOpsStep()
                                 snDevOpsChange()

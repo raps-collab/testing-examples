@@ -7,6 +7,7 @@ pipeline {
                 stage("Staging-Deploy1") {
                     steps {
                         snDevOpsStep()
+                        snDevOpsChange()
                         echo 'test'
                     }
                 }

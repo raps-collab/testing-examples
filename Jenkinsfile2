@@ -5,6 +5,7 @@ pipeline {
 	        stage('CI-Test') {
 	            steps {
 	                snDevOpsStep()
+			snDevOpsChange()
 	                //sleep 10   
 	                echo 'test'
 	            }

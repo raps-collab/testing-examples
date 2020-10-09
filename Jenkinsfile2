@@ -1,0 +1,12 @@
+pipeline {
+	    agent any
+	    stages {
+	        
+	        stage('CI-Test') {
+	            steps {
+	                snDevOpsStep()
+	                //sleep 10   
+	                echo 'test'
+	            }
+	        }
+}

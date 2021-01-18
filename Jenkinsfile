@@ -49,6 +49,7 @@ pipeline {
                         stage("Alert-If-Issues") {
                             steps {
                                 snDevOpsStep()
+                                snDevOpsChange()
                                 echo 'test'
                             }
                         }

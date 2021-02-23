@@ -104,6 +104,7 @@ pipeline {
            stages{
              stage('sub-prod') {
                steps {
+                   
                    snDevOpsStep()
                     snDevOpsChange()
                 }

@@ -32,7 +32,7 @@ pipeline {
         
         stage('CI') {
             steps {
-                snDevOpsStep()
+                //snDevOpsStep()
                 echo 'test'
             }
         }

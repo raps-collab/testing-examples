@@ -6,7 +6,7 @@ pipeline {
              stages {
                 stage("Staging-Deploy1") {
                     steps {
-                        snDevOpsStep()
+                        //snDevOpsStep()
                         snDevOpsChange()
                         echo 'test'
                     }
@@ -19,13 +19,13 @@ pipeline {
 					sh '/Applications/SonarScanner/bin/sonar-scanner -Dproject.settings=/Applications/sonar-scanner.properties'
 					//sh 'env'
               			}
-                                snDevOpsStep()
+                                //snDevOpsStep()
                                 echo 'test'
                             }
                         }
                         stage("Conclude1") {
                             steps {
-                                snDevOpsStep()
+                                //snDevOpsStep()
                                 echo 'test'
                             }
                         }
@@ -44,7 +44,7 @@ pipeline {
             stages {
                 stage("Staging-Deploy") {
                     steps {
-                        snDevOpsStep()
+                        //snDevOpsStep()
                         echo 'test'
                     }
                 }
@@ -52,14 +52,14 @@ pipeline {
                     stages {
                         stage("Alert-If-Issues") {
                             steps {
-                                snDevOpsStep()
+                                //snDevOpsStep()
                                 snDevOpsChange()
                                 echo 'test'
                             }
                         }
                         stage("Conclude") {
                             steps {
-                                snDevOpsStep()
+                                //snDevOpsStep()
                                 echo 'test'
                             }
                         }
@@ -81,7 +81,7 @@ pipeline {
                 }
                 stage('UAT static code test') {
                     steps {
-                        snDevOpsStep()
+                        //snDevOpsStep()
                         snDevOpsChange()
                             echo 'test'
                     }
@@ -108,7 +108,7 @@ pipeline {
            stages{
              stage('sub-prod') {
                steps {
-                   snDevOpsStep()
+                   //snDevOpsStep()
                     snDevOpsChange()
                 }
              }
